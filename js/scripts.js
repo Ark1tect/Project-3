@@ -6,9 +6,10 @@ const map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/light-v11',
     center: [-94.74, 40.4],
     zoom: 3.5,
+    //chose vantage to see every team
 
 });
-
+//coding in team and stadium location from google maps
 var stadium_location = [
     {
         "Team": "Anaheim Ducks",
@@ -223,7 +224,7 @@ stadium_location.forEach(function(record){
 
     console.log(record)
 
-
+//offseting popup
     const popup = new mapboxgl.Popup({
         offset: 30,
         anchor: "bottom-left",
@@ -235,7 +236,7 @@ stadium_location.forEach(function(record){
 
         var color
 
-    // use if statements to assign colors based on division data
+    // use if statements to assign colors based on division 
     if (record.division === "Atlantic") {
         color = '#FFB81C'
     }
